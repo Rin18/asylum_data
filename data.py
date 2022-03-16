@@ -8,6 +8,7 @@ wrkbk = openpyxl.load_workbook(file_name)
 sh = wrkbk.active
   
 # iterate through data and append in category array
+# if parsing through male data M = true
 def parse_rows(row, sheet, category, M):
   limit = 56 if M else sh.max_row+1
   for i in range(row, limit, 14):
