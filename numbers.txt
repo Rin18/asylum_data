@@ -1,0 +1,98 @@
+Patients admitted in 1860-1873
+
+Number of women admitted in the year  1860
+91
+Number of men admitted in the year  1860
+93
+Women:  49.45652173913044 %    Men:  50.54347826086956 %
+
+
+Number of women admitted in the year  1861
+83
+Number of men admitted in the year  1861
+77
+Women:  51.875 %    Men:  48.125 %
+
+
+Number of women admitted in the year  1862
+81
+Number of men admitted in the year  1862
+64
+Women:  55.86206896551724 %    Men:  44.13793103448276 %
+
+
+Number of women admitted in the year  1863
+237
+Number of men admitted in the year  1863
+186
+Women:  56.02836879432624 %    Men:  43.97163120567376 %
+
+
+Number of women admitted in the year  1864
+249
+Number of men admitted in the year  1864
+256
+Women:  49.306930693069305 %    Men:  50.693069306930695 %
+
+
+Number of women admitted in the year  1865
+169
+Number of men admitted in the year  1865
+185
+Women:  47.740112994350284 %    Men:  52.259887005649716 %
+
+
+Number of women admitted in the year  1866
+152
+Number of men admitted in the year  1866
+175
+Women:  46.48318042813456 %    Men:  53.51681957186544 %
+
+
+Number of women admitted in the year  1867
+165
+Number of men admitted in the year  1867
+100
+Women:  62.264150943396224 %    Men:  37.735849056603776 %
+
+
+Number of women admitted in the year  1868
+153
+Number of men admitted in the year  1868
+158
+Women:  49.19614147909968 %    Men:  50.80385852090032 %
+
+
+Number of women admitted in the year  1869
+161
+Number of men admitted in the year  1869
+170
+Women:  48.6404833836858 %    Men:  51.3595166163142 %
+
+
+Number of women admitted in the year  1870
+166
+Number of men admitted in the year  1870
+175
+Women:  48.68035190615836 %    Men:  51.31964809384164 %
+
+
+Number of women admitted in the year  1871
+140
+Number of men admitted in the year  1871
+114
+Women:  55.118110236220474 %    Men:  44.881889763779526 %
+
+
+Number of women admitted in the year  1872
+206
+Number of men admitted in the year  1872
+178
+Women:  53.645833333333336 %    Men:  46.354166666666664 %
+
+
+Number of women admitted in the year  1873
+214
+Number of men admitted in the year  1873
+198
+Women:  51.94174757281554 %    Men:  48.05825242718446 %
