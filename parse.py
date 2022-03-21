@@ -1,7 +1,7 @@
 import openpyxl
 
 # load excel with its path
-file_name = 'admissions.xlsx'
+file_name = 'admissions_1901.xlsx'
 wrkbk = openpyxl.load_workbook(file_name)
 
 # get worksheet
