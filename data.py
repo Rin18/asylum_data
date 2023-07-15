@@ -54,6 +54,14 @@ parse_rows(63, sh, religion_F, False)
 parse_rows(68, sh, outcome_F, False)
 parse_rows(70, sh, duration_F, False)
 
+# stats maps
+p_died = 'Died'
+p_recovered = 'Recovered'
+p_outcome_mp = {p_died : 0, p_recovered : 0}
+
+p_from_workhouse = 'Workhouse'
+p_by_police = 'Brought in by police'
+p_came_from_mp = {p_from_workhouse : 0, p_by_police : 0}
 
 # Women stats
 
@@ -90,30 +98,22 @@ for i in religion_F:
     p_CoE = percentage(count, len(religion_F))
 
 # Outcome %
-p_recovered = 0
-p_died = 0
-count_d = 0
-count_r = 0
+p_recovered_count = 0
+p_died_count = 0
 for i in outcome_F:
-    if(i == 'Died'):
-        count_d = count_d + 1
-    elif(i == 'Recovered'):
-        count_r = count_r + 1
-    p_died = percentage(count_d, len(outcome_F))
-    p_recovered = percentage(count_r, len(outcome_F))
+    if i in p_outcome_mp.keys():
+        p_outcome_mp[i] += 1
+        p_died_count = percentage(p_outcome_mp[p_died], len(outcome_F))
+        p_recovered_count = percentage(p_outcome_mp[p_recovered], len(outcome_F))
 
 # Came from %
-p_workhouse = 0
-p_police = 0
-count_w = 0
-count_p = 0
+p_workhouse_count = 0
+p_police_count = 0
 for i in place_F:
-    if(i == 'Workhouse'):
-        count_w = count_w + 1
-    elif(i == 'Brought in by police'):
-        count_p = count_p + 1
-    p_workhouse = percentage(count_w, len(place_F))
-    p_police = percentage(count_p, len(place_F))
+    if i in p_came_from_mp.keys():
+        p_came_from_mp[i] += 1
+        p_workhouse_count = percentage(p_came_from_mp[p_from_workhouse], len(place_F))
+        p_police_count = percentage(p_came_from_mp[p_by_police], len(place_F))
 
 # Print stats women
 print("Women:")
@@ -122,17 +122,24 @@ print("Average stay: \n", average_stay)
 print("Average age: \n", average)
 print("Percentage CoE: \n", p_CoE)
 print("Outcome: ")
-print("Percentage died: ", p_died)
-print("Percentage recovered: ", p_recovered)
+print("Percentage died: ", p_died_count)
+print("Percentage recovered: ", p_recovered_count)
 print("Occupations: \n", set(occupation_F))
 print("Came from: ")
-print("Percentage workhouse: ", p_workhouse)
-print("Percentage police: ", p_police)
+print("Percentage workhouse: ", p_workhouse_count)
+print("Percentage police: ", p_police_count)
 
 print("\n|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n")
 
 
 # Men stats
+
+#Reset maps
+for key in p_outcome_mp:
+    p_outcome_mp[key] = 0
+
+for key in p_came_from_mp:
+    p_came_from_mp[key] = 0
 
 # Stayed over 6 months %
 p_over = 0
@@ -167,30 +174,22 @@ for i in religion_M:
     p_CoE = percentage(count, len(religion_M))
 
 # Outcome %
-p_recovered = 0
-p_died = 0
-count_d = 0
-count_r = 0
+p_recovered_count = 0
+p_died_count = 0
 for i in outcome_M:
-    if(i == 'Died'):
-        count_d = count_d + 1
-    elif(i == 'Recovered'):
-        count_r = count_r + 1
-    p_died = percentage(count_d, len(outcome_M))
-    p_recovered = percentage(count_r, len(outcome_M))
+    if i in p_outcome_mp.keys():
+        p_outcome_mp[i] += 1
+        p_died_count = percentage(p_outcome_mp[p_died], len(outcome_M))
+        p_recovered_count = percentage(p_outcome_mp[p_recovered], len(outcome_M))
 
 # Came from %
-p_workhouse = 0
-p_police = 0
-count_w = 0
-count_p = 0
+p_workhouse_count = 0
+p_police_count = 0
 for i in place_M:
-    if(i == 'Workhouse'):
-        count_w = count_w + 1
-    elif(i == 'Brought in by police'):
-        count_p = count_p + 1
-    p_workhouse = percentage(count_w, len(place_M))
-    p_police = percentage(count_p, len(place_M))
+    if i in p_came_from_mp.keys():
+        p_came_from_mp[i] += 1
+        p_workhouse_count = percentage(p_came_from_mp[p_from_workhouse], len(place_M))
+        p_police_count = percentage(p_came_from_mp[p_by_police], len(place_M))
 
 
 # Print stats men
@@ -203,12 +202,12 @@ print("Average stay without guy who stayed 12 years: \n", average_stay)
 print("Average age: \n", average)
 print("Percentage CoE: \n", p_CoE)
 print("Outcome: ")
-print("Percentage died: ", p_died)
-print("Percentage recovered: ", p_recovered)
+print("Percentage died: ", p_died_count)
+print("Percentage recovered: ", p_recovered_count)
 print("Occupations: \n", set(occupation_M))
 print("Came from: ")
-print("Percentage workhouse: ", p_workhouse)
-print("Percentage police: ", p_police)
+print("Percentage workhouse: ", p_workhouse_count)
+print("Percentage police: ", p_police_count)
 
 """ 
 Started searching for reports of violence, realised it was overkill due to inconsistency in phrasing
