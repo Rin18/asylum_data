@@ -98,7 +98,7 @@ for i in outcome_F:
     if(i == 'Died'):
         count_d = count_d + 1
     elif(i == 'Recovered'):
-        count_r = count_d + 1
+        count_r = count_r + 1
     p_died = percentage(count_d, len(outcome_F))
     p_recovered = percentage(count_r, len(outcome_F))
 
@@ -175,7 +175,7 @@ for i in outcome_M:
     if(i == 'Died'):
         count_d = count_d + 1
     elif(i == 'Recovered'):
-        count_r = count_d + 1
+        count_r = count_r + 1
     p_died = percentage(count_d, len(outcome_M))
     p_recovered = percentage(count_r, len(outcome_M))
 
