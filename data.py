@@ -209,28 +209,3 @@ print("Came from: ")
 print("Percentage workhouse: ", p_workhouse_count)
 print("Percentage police: ", p_police_count)
 
-""" 
-Started searching for reports of violence, realised it was overkill due to inconsistency in phrasing
-Can achieve similar result with just ctrl+f
-
-def parse_reports(row, sheet, M):
-  limit = 56 if M else sh.max_row+1
-  word = 'violent'
-  count = 0
-  for i in range(row, limit, 14):
-    for j in range(2, sheet.max_column+1):
-        cell_obj = sh.cell(row=i, column=j)
-        print("Report: \n")
-        print(cell_obj.value)
-        if(cell_obj.value != None and word in cell_obj.value):
-            print("is violent")
-            count = count + 1
-    return count
-
-
-print("Nurse \n")
-violent_report_M  = parse_reports(9, sh, True)
-print("Doctor \n")
-violent_report_M = violent_report_M + parse_reports(10, sh, True)
-print(violent_report_M)
-"""
